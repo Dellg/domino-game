@@ -43,6 +43,8 @@ public class InterfaceInicial extends JFrame {
 	JComboBox<String> iconeCombobox;
 	
 	public InterfaceInicial(){
+		setTitle("Domin\u00F3");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(InterfaceInicial.class.getResource("/image/icon/icone.png")));
 		getContentPane().setBackground(new Color(139, 0, 0));
 		getContentPane().setLayout(null);
 

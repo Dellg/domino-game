@@ -1,5 +1,6 @@
 package controle;
 
+import java.awt.Toolkit;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -36,8 +37,8 @@ public class PDFRanking {
 			document.open();
 			document.setPageSize(PageSize.A4);
 	
-			// links assim não funcionarão dentro do .jar
-			Image topo = Image.getInstance("C:\\Domino\\domino-game\\Engenharia\\image\\graphics\\domino_pdf.png");
+			java.awt.Image dominoPdf = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/image/graphics/domino_pdf.png"));
+			Image topo = com.itextpdf.text.Image.getInstance(dominoPdf, null);
 			
 			topo.scaleToFit(420, 420);
 			topo.setAlignment(Element.ALIGN_CENTER);
@@ -114,9 +115,10 @@ public class PDFRanking {
 				tabela.addCell(pos);
 				
 				pathIcon = jogador.getIcone();
-				pathIcon = pathIcon.replace("\\","/").substring(0, pathIcon.length());
-				Image img = Image.getInstance(pathIcon);
 				
+				java.awt.Image awtImage = Toolkit.getDefaultToolkit().getImage(getClass().getResource(pathIcon));
+				Image img = com.itextpdf.text.Image.getInstance(awtImage, null);
+								
 				tabela.addCell(img);
 				
 				tabela.addCell(jogador.getNome());
