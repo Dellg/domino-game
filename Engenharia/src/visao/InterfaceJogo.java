@@ -47,6 +47,8 @@ public class InterfaceJogo extends JFrame {
 	DAO dao = new DAO();
 
 	public InterfaceJogo(final Partida part, boolean continuando){
+		setTitle("Domin\u00F3: Em Jogo");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(InterfaceJogo.class.getResource("/image/icon/icone.png")));
 		getContentPane().setLayout(new BorderLayout(0, 0));
 		
 		JPanel iaUpPainel = new JPanel();

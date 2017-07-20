@@ -26,6 +26,8 @@ public class InterfaceHelp extends JFrame {
 	JLabel help;
 
 	public InterfaceHelp(final Jogador jogador_logado){
+		setTitle("Domin\u00F3: Ajuda");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(InterfaceHelp.class.getResource("/image/icon/icone.png")));
 		getContentPane().setLayout(null);
 		getContentPane().setBackground(new Color(139, 0, 0));
 		

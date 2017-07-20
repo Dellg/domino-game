@@ -42,6 +42,8 @@ public class InterfaceRanking extends JFrame {
 	JPanel inforTopOne, inforTopTwo, inforTopThree, inforTopFour, inforTopFive;
 
 	public InterfaceRanking(final Jogador jogador_logado) {
+		setTitle("Domin\u00F3: Ranking");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(InterfaceRanking.class.getResource("/image/icon/icone.png")));
 		getContentPane().setBackground(new Color(139, 0, 0));
 		
 		ArrayList<Jogador> listaJogadores = dao.rankingDAO();

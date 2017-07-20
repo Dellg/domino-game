@@ -33,8 +33,11 @@ public class InterfaceMenu extends JFrame {
 	JLabel sobreLabel1, sobreLabel2, sobreLabel3, sobreLabel4, sobreLabel5, sobreLabel6, sobreLabel7, bemVindo, icone;
 	JButton botaoVoltar;
 	private JButton somBt;
+	private JLabel iconeJogo;
 
 	public InterfaceMenu(final Jogador jogador_logado) {
+		setTitle("Domin\u00F3: Menu Principal");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(InterfaceMenu.class.getResource("/image/icon/icone.png")));
 		dao = new DAO();
 		getContentPane().setBackground(new Color(139, 0, 0));
 		getContentPane().setLayout(null);
@@ -195,12 +198,12 @@ public class InterfaceMenu extends JFrame {
 		sobre = new JPanel();
 		sobre.setVisible(false);
 		sobre.setBackground(new Color(139, 0, 0));
-		sobre.setBounds(305, 232, 389, 332);
+		sobre.setBounds(270, 232, 424, 332);
 		getContentPane().add(sobre);
 		sobre.setLayout(null);
 		
 		sobreLabel1 = new JLabel(" Engenharia de Software ");
-		sobreLabel1.setBounds(21, 5, 346, 44);
+		sobreLabel1.setBounds(22, 0, 346, 44);
 		sobreLabel1.setAlignmentX(Component.CENTER_ALIGNMENT);
 		sobreLabel1.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel1.setForeground(Color.WHITE);
@@ -208,7 +211,7 @@ public class InterfaceMenu extends JFrame {
 		sobre.add(sobreLabel1);
 		
 		sobreLabel2 = new JLabel("Equipe:                          ");
-		sobreLabel2.setBounds(86, 54, 217, 29);
+		sobreLabel2.setBounds(69, 49, 217, 29);
 		sobreLabel2.setAlignmentX(Component.CENTER_ALIGNMENT);
 		sobreLabel2.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel2.setForeground(Color.WHITE);
@@ -216,35 +219,35 @@ public class InterfaceMenu extends JFrame {
 		sobre.add(sobreLabel2);
 		
 		sobreLabel3 = new JLabel(" Adriano Araújo Felisberto ");
-		sobreLabel3.setBounds(90, 88, 209, 29);
+		sobreLabel3.setBounds(73, 83, 209, 29);
 		sobreLabel3.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel3.setForeground(Color.WHITE);
 		sobreLabel3.setFont(new Font("Brush Script MT", Font.PLAIN, 23));
 		sobre.add(sobreLabel3);
 		
 		sobreLabel4 = new JLabel(" Eleonilia Monteiro Rodrigues ");
-		sobreLabel4.setBounds(79, 122, 231, 29);
+		sobreLabel4.setBounds(62, 117, 231, 29);
 		sobreLabel4.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel4.setForeground(Color.WHITE);
 		sobreLabel4.setFont(new Font("Brush Script MT", Font.PLAIN, 23));
 		sobre.add(sobreLabel4);
 		
 		sobreLabel5 = new JLabel(" Maria José Oliveira Costa ");
-		sobreLabel5.setBounds(89, 156, 210, 29);
+		sobreLabel5.setBounds(72, 151, 210, 29);
 		sobreLabel5.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel5.setForeground(Color.WHITE);
 		sobreLabel5.setFont(new Font("Brush Script MT", Font.PLAIN, 23));
 		sobre.add(sobreLabel5);
 		
 		sobreLabel6 = new JLabel(" Wendell Gomes Silva ");
-		sobreLabel6.setBounds(109, 190, 170, 29);
+		sobreLabel6.setBounds(92, 185, 170, 29);
 		sobreLabel6.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel6.setForeground(Color.WHITE);
 		sobreLabel6.setFont(new Font("Brush Script MT", Font.PLAIN, 23));
 		sobre.add(sobreLabel6);
 		
 		sobreLabel7 = new JLabel("  Desenvolvido em 2017  ");
-		sobreLabel7.setBounds(52, 224, 285, 44);
+		sobreLabel7.setBounds(35, 219, 285, 44);
 		sobreLabel7.setHorizontalAlignment(SwingConstants.RIGHT);
 		sobreLabel7.setForeground(Color.WHITE);
 		sobreLabel7.setFont(new Font("Brush Script MT", Font.PLAIN, 35));
@@ -261,8 +264,13 @@ public class InterfaceMenu extends JFrame {
 		botaoVoltar.setDisabledIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/image/graphics/BtP-voltar-disabled.png"))));
 		botaoVoltar.setHorizontalTextPosition(SwingConstants.CENTER);
 		botaoVoltar.setBorder(null);
-		botaoVoltar.setBounds(161, 259, 90, 90);
+		botaoVoltar.setBounds(162, 254, 90, 90);
 		sobre.add(botaoVoltar);
+		
+		iconeJogo = new JLabel("New label");
+		iconeJogo.setIcon(new ImageIcon(InterfaceMenu.class.getResource("/image/icon/icone.png")));
+		iconeJogo.setBounds(350, 48, 64, 64);
+		sobre.add(iconeJogo);
 		
 		somBt = new JButton();
 		somBt.setBounds(704, 530, 25, 25);
